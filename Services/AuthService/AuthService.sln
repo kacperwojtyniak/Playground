@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService", "src\AuthService.csproj", "{00671477-D84B-4594-BEB5-6F5EB9221F97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{4FCFF0CD-5A1D-409E-9CE1-750AD26D0638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{846BE46F-CD6C-487A-A2D6-F96E37485EFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDbAdapterModule", "..\..\Modules\MongoDbAdapter\src\MongoDbAdapter\MongoDbAdapterModule.csproj", "{998648BD-B747-4BC9-9D2D-BC8D89EBD410}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database.Common", "..\..\Libs\Database.Common\Database.Common\Database.Common.csproj", "{5EA300EC-4211-494D-9FD3-96959AC54929}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demos.Common", "..\..\Libs\Demos.Common\Demos.Common.csproj", "{A5E90F53-29E7-4EBF-94A2-75EA24E8EF55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tst", "tst", "{AA9033C6-BD3F-41FE-94AB-D0D9F0505183}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService.Tests", "tst\AuthService.Tests\AuthService.Tests.csproj", "{9295D4E4-FE43-4765-8FCB-68252F02CB31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00671477-D84B-4594-BEB5-6F5EB9221F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00671477-D84B-4594-BEB5-6F5EB9221F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00671477-D84B-4594-BEB5-6F5EB9221F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00671477-D84B-4594-BEB5-6F5EB9221F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998648BD-B747-4BC9-9D2D-BC8D89EBD410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998648BD-B747-4BC9-9D2D-BC8D89EBD410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998648BD-B747-4BC9-9D2D-BC8D89EBD410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998648BD-B747-4BC9-9D2D-BC8D89EBD410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA300EC-4211-494D-9FD3-96959AC54929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA300EC-4211-494D-9FD3-96959AC54929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA300EC-4211-494D-9FD3-96959AC54929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA300EC-4211-494D-9FD3-96959AC54929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E90F53-29E7-4EBF-94A2-75EA24E8EF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E90F53-29E7-4EBF-94A2-75EA24E8EF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E90F53-29E7-4EBF-94A2-75EA24E8EF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E90F53-29E7-4EBF-94A2-75EA24E8EF55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9295D4E4-FE43-4765-8FCB-68252F02CB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9295D4E4-FE43-4765-8FCB-68252F02CB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9295D4E4-FE43-4765-8FCB-68252F02CB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9295D4E4-FE43-4765-8FCB-68252F02CB31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{998648BD-B747-4BC9-9D2D-BC8D89EBD410} = {846BE46F-CD6C-487A-A2D6-F96E37485EFC}
+		{5EA300EC-4211-494D-9FD3-96959AC54929} = {4FCFF0CD-5A1D-409E-9CE1-750AD26D0638}
+		{A5E90F53-29E7-4EBF-94A2-75EA24E8EF55} = {4FCFF0CD-5A1D-409E-9CE1-750AD26D0638}
+		{9295D4E4-FE43-4765-8FCB-68252F02CB31} = {AA9033C6-BD3F-41FE-94AB-D0D9F0505183}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {623B9B05-8B1D-4437-9A02-30647127FCD9}
+	EndGlobalSection
+EndGlobal

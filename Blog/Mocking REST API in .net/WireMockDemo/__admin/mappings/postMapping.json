@@ -1,0 +1,27 @@
+ {   
+	"Guid": "3ca2e928-e44d-4edb-8c06-d6d1b6aed57f",
+    "Request": {
+        "Path": {
+            "Matchers": [
+                {
+                    "Name": "WildcardMatcher",
+                    "Pattern": "/postTest/*",
+                    "IgnoreCase": false
+                }
+            ]
+        },
+        "Methods": [
+            "post"
+        ],
+		 "Body": {
+            "Matcher": {
+                "Name": "JsonMatcher",
+                "Pattern": "{ \"blogUrl\": \"kacperwojtyniak.com\"}"
+            }
+        }
+    },
+    "Response": {
+        "StatusCode": 200,
+        "Body": "{ \"result\": \"My post method mock is working!\" }"
+    }
+}

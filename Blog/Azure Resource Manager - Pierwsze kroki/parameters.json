@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_blogdemoapp_name": {
+            "value": "blogdemoappfromarm"
+        },
+        "serverfarms_DemoSP_name": {
+            "value": "DemoSPfromarm"
+        },
+        "sites_blogdemofunc_name": {
+            "value": "blogdemofuncfromarm"
+        },
+        "serverfarms_WestEuropePlan_name": {
+            "value": "SouthUKPlanfromarm"
+        },
+        "config_web_name": {
+            "value": "web"
+        },
+        "config_web_name_1": {
+            "value": "web"
+        },
+        "storageAccounts_blogdemostorage_name": {
+            "value": "blogdemostoragefromarm"
+        },
+        "hostNameBindings_blogdemoapp.azurewebsites.net_name": {
+            "value": "blogdemoappfromarm.azurewebsites.net"
+        },
+        "hostNameBindings_blogdemofunc.azurewebsites.net_name": {
+            "value": "blogdemofuncfromarm.azurewebsites.net"
+        },
+        "resourceLocation": {
+            "value": "UK South"
+        }
+    }
+}

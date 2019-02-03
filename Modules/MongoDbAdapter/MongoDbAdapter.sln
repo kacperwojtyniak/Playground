@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDbAdapterModule", "src\MongoDbAdapter\MongoDbAdapterModule.csproj", "{BDFEA617-C196-4EE2-B2AE-4939D415FE17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{0329F0AE-016D-4B84-BF20-C67F89D4F7DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database.Common", "..\..\Libs\Database.Common\Database.Common\Database.Common.csproj", "{D35C8E84-D1B1-4F7D-9291-EA3536D0F4F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDFEA617-C196-4EE2-B2AE-4939D415FE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDFEA617-C196-4EE2-B2AE-4939D415FE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDFEA617-C196-4EE2-B2AE-4939D415FE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDFEA617-C196-4EE2-B2AE-4939D415FE17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D35C8E84-D1B1-4F7D-9291-EA3536D0F4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D35C8E84-D1B1-4F7D-9291-EA3536D0F4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D35C8E84-D1B1-4F7D-9291-EA3536D0F4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D35C8E84-D1B1-4F7D-9291-EA3536D0F4F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D35C8E84-D1B1-4F7D-9291-EA3536D0F4F9} = {0329F0AE-016D-4B84-BF20-C67F89D4F7DB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15DC5A02-3219-46E9-A5B3-78F22EB37B4A}
+	EndGlobalSection
+EndGlobal

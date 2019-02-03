@@ -1,0 +1,21 @@
+{   
+	"Guid": "f236756f-b726-4cb3-8b17-5e4992dbc75a",
+    "Request": {
+        "Path": {
+            "Matchers": [
+                {
+                    "Name": "WildcardMatcher",
+                    "Pattern": "/getTest/*",
+                    "IgnoreCase": false
+                }
+            ]
+        },
+        "Methods": [
+            "get"
+        ]
+    },
+    "Response": {
+        "StatusCode": 200,
+        "Body": "{ \"result\": \"My get method mock is working!\" }"    
+    }
+}

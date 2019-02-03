@@ -1,0 +1,21 @@
+{   
+	"Guid": "73a82977-4588-4da3-9f13-5976bdeec9a9",
+    "Request": {
+        "Path": {
+            "Matchers": [
+                {
+                    "Name": "WildcardMatcher",
+                    "Pattern": "/custom/*",
+                    "IgnoreCase": false
+                }
+            ]
+        },
+        "Methods": [
+            "get"
+        ]
+    },
+    "Response": {
+        "StatusCode": 200,
+        "Body": "{ \"result\": \"MockCustomGetIsWorking!\" }"    
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccounts_kacperstorage_name": {
+            "defaultValue": "kacperstorage",
+            "type": "String"
+        },
+        "resourceNameSuffix" : {
+            "defaultValue" : "yay",
+            "type" : "String"
+        },
+        "storageCount" : {
+            "defaultValue": 1,
+            "type": "int"
+        }
+    },
+    "variables": {},
+    "functions": [
+        {
+          "namespace": "nameProvider",
+          "members": {
+            "getName": {
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                    "name": "suffix",
+                    "type" : "string"
+                }
+              ],
+              "output": {
+                "type": "string",
+                "value": "[concat(parameters('name'), parameters('suffix'), 'func')]"
+              }
+            }
+          }
+        }
+      ],
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/82b5bb8a-2ea2-454a-80f5-cbada80b910c/resourceGroups/SomeResourceGroup/providers/Microsoft.Storage/storageAccounts/kacperstorage'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "name": "[concat(copyIndex(), nameProvider.getName(parameters('storageAccounts_kacperstorage_name'), parameters('resourceNameSuffix')))]",
+            "apiVersion": "2018-07-01",
+            "location": "[resourceGroup().location]",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            },
+            "copy": {
+                "name": "storageCopy",
+                "count" : "[parameters('storageCount')]"
+            },
+            "dependsOn": []
+        }
+    ]
+}
