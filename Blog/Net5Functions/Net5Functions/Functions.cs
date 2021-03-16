@@ -1,33 +1,32 @@
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
+using System.Net;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
+
 
 namespace Net5Functions
 {
     public static class Functions
     {
-        [FunctionName("Hello")]
-        public static IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "hello/{name}")] HttpRequest req,
+        [Function("Hello")]
+        public static HttpResponseData Run(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "hello/{name}")] HttpRequestData req,
             string name,
-            ILogger log)
+            FunctionContext ctx)
         {
-            log.LogInformation("Processed function in .net core");
+            ctx.GetLogger("hello").LogInformation("Processed function in .net core");
 
-            string responseMessage = $"Hello {name}. Welcome to .net core 3 functions.";
+            string responseMessage = $"Hello {name}. Welcome to .net 5 functions.";
 
-            return new OkObjectResult(responseMessage);
+            var response = req.CreateResponse(HttpStatusCode.OK);
+            response.WriteString(responseMessage);
+            return response;
         }
 
-        [FunctionName("Cron")]
-        public static void Cron([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer, ILogger log)
+        [Function("Cron")]
+        public static void Cron([TimerTrigger("0 */1 * * * *")] FunctionContext ctx)
         {
-            log.LogTrace("Hello from cron .net 3");
+            ctx.GetLogger("cron").LogInformation("Hello from cron .net 5");
         }
     }
 }
